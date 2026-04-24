@@ -229,7 +229,7 @@ export default function MikoQuiz() {
               onError={e => e.target.style.display = 'none'} />
 
             <button onClick={() => {
-              const t = `先生みこの政治塾で${score}/8問正解しました！🌸\nあなたも政治クイズに挑戦してみて！\n#先生みこの政治塾`;
+              const t = `先生みこの政治塾で${score}/8問正解しました！🌸\nあなたも政治クイズに挑戦してみて！\nhttps://miko-quiz.vercel.app\n#真白みこ`;
               window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(t)}`, '_blank');
             }} style={{ ...S.btn('#000', '#fff'), marginBottom: 10 }}>𝕏 結果をシェアする</button>
 
