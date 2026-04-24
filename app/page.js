@@ -91,6 +91,7 @@ export default function MikoQuiz() {
   }
 
   const S = {
+    pageWrap: { background: '#1e3a1e', minHeight: '100vh', width: '100%' },
     main: { fontFamily: "'Noto Serif JP', 'Georgia', serif", background: '#1e3a1e', minHeight: '100vh', color: '#f0f0e8', maxWidth: 430, margin: '0 auto', position: 'relative', overflow: 'hidden' },
     noise: { position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255,255,255,0.012) 3px, rgba(255,255,255,0.012) 4px)', pointerEvents: 'none' },
     wrap: { position: 'relative', zIndex: 1, padding: '2.5rem 1.5rem 3rem', minHeight: '100vh', display: 'flex', flexDirection: 'column' },
@@ -114,7 +115,7 @@ export default function MikoQuiz() {
   };
 
   return (
-    <main style={S.main}>
+    <div style={S.pageWrap}><main style={S.main}>
       <div style={S.noise} />
 
       {screen === 'start' && (
@@ -236,6 +237,6 @@ export default function MikoQuiz() {
           </div>
         );
       })()}
-    </main>
+    </main></div>
   );
 }
